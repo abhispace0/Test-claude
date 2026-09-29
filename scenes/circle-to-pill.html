@@ -1,0 +1,11 @@
+<!doctype html><html><head><style>
+html,body{margin:0;width:1280px;height:720px;background:#fff;overflow:hidden}
+#s{position:absolute;left:50%;top:50%;background:#000;transform:translate(-50%,-50%)}
+</style></head><body><div id="s"></div><script>
+// Underdamped spring, analytic solution: 0 -> 1
+const spring=(t,k=170,c=12)=>{const w=Math.sqrt(k),z=c/(2*w),wd=w*Math.sqrt(1-z*z);
+ return 1-Math.exp(-z*w*t)*(Math.cos(wd*t)+(z*w/wd)*Math.sin(wd*t));};
+window.renderAt=t=>{const p=spring(Math.max(0,t-0.1)); // 0.1s hold on the circle
+ const s=document.getElementById('s'),h=200,w=200+400*p;
+ s.style.width=w+'px';s.style.height=h+'px';s.style.borderRadius=(h/2)+'px';};
+</script></body></html>
