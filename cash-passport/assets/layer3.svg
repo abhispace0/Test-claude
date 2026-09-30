@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="400.104" height="237.157" viewBox="0 0 400.104 237.157" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="extrude-group" opacity="0.4">
+<path id="base-face" d="M166.277 4C170.103 1.79086 176.307 1.79086 180.133 4L393.176 127C397.002 129.209 397.002 132.791 393.176 135L233.827 227C230.001 229.209 223.797 229.209 219.97 227L6.9282 104C3.10186 101.791 3.10186 98.2091 6.9282 96L166.277 4Z" fill="#BDEBFD" stroke="white"/>
+<rect id="left-face" width="246" height="8" transform="matrix(0.866025 0.5 0 1 6.92818 104)" fill="#93DEFC" stroke="white"/>
+<rect id="right-face" width="184" height="8" transform="matrix(0.866025 -0.5 0 1 233.827 227)" fill="#65BEE1" stroke="white"/>
+<path id="r-face-1" d="M4.05843 100C4.05843 101.562 5.15511 102.976 6.92819 104V112C5.15511 110.976 4.05843 109.562 4.05843 108V100Z" fill="#93DEFC" stroke="white"/>
+<path id="r-face-2" d="M219.97 227C223.797 229.209 230.001 229.209 233.827 227V235C230.001 237.209 223.797 237.209 219.97 235V227Z" fill="#65BEE1" stroke="white"/>
+<path id="r-face-3" d="M396.045 131C396.045 132.562 394.949 133.976 393.176 135V143C394.949 141.976 396.045 140.562 396.045 139V131Z" fill="#65BEE1" stroke="white"/>
+</g>
+</svg>
