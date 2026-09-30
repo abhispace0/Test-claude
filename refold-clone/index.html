@@ -22,7 +22,7 @@
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.5}
 a{color:inherit;text-decoration:none}
-.pad{padding-inline:var(--gutter)}
+.pad{padding-inline:4rem}
 .wrap{max-width:1440px;margin-inline:auto}
 .mono{font-family:var(--mono);text-transform:uppercase;letter-spacing:.02em}
 .xs{font-size:12px}.dim{opacity:.5}.purple{color:var(--purple)}
@@ -41,43 +41,45 @@ a{color:inherit;text-decoration:none}
 .burger{display:none;background:none;border:0;color:inherit;font-size:24px;cursor:pointer}
 
 /* hero */
-.hero{padding-block:72px 48px}
-.hero-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,80px);align-items:start}
+.hero{padding-top:0}
+.hero-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;position:relative;padding-top:0}
+.left{display:flex;flex-direction:column;align-items:flex-start;width:100%;max-width:23.5rem;position:sticky;top:10rem}
+.right{display:flex;flex-direction:column;gap:1rem;width:100%;max-width:75rem;margin-top:10rem}
 .pill{display:inline-flex;align-items:center;gap:12px;padding:8px 8px 8px 18px;border-radius:999px;background:var(--white);color:var(--black);font-family:var(--mono);text-transform:uppercase;font-size:14px}
 .pill span{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--blue);color:#fff;transition:transform .25s}
 .pill:hover span{transform:rotate(45deg)}
 .tags{margin-block:20px 28px}
-h1{font-size:clamp(40px,6vw,88px);line-height:1;letter-spacing:-.04em;font-weight:500;margin-bottom:24px}
+h1{font-size:clamp(32px,3vw,44px);line-height:1.1;letter-spacing:-.03em;font-weight:500;margin-bottom:16px}
 .lede{max-width:46ch;opacity:.7}
 
 /* tabs */
-.tabs{border-top:1px solid rgba(255,255,255,.2)}
+.tabs{width:100%;margin-top:2rem;border-top:1px solid rgba(255,255,255,.2)}
 .tab{border-bottom:1px solid rgba(255,255,255,.2)}
-.tab-top{display:flex;justify-content:space-between;align-items:center;width:100%;background:none;border:0;color:inherit;padding:18px 0;cursor:pointer;font:inherit}
-.tab-top b{font-family:var(--mono);text-transform:uppercase;font-weight:400;font-size:16px}
+.tab-top{display:flex;justify-content:space-between;align-items:center;width:100%;background:none;border:0;color:inherit;text-align:left;padding:12px 0;cursor:pointer;font:inherit}
+.tab-top b{font-weight:400;font-size:16px}
 .tab-top em{font-style:normal;font-size:22px;transition:transform .25s}
 .tab.open .tab-top em{transform:rotate(45deg)}
 .tab-bottom{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s}
 .tab.open .tab-bottom{grid-template-rows:1fr}
 .tab-bottom>div{overflow:hidden}
-.tab-bottom p{padding-bottom:20px;opacity:.7;max-width:60ch}
+.tab-bottom p{padding-bottom:16px;opacity:.6;font-size:14px}
 
 /* placeholder image blocks */
-.ph{border-radius:16px;aspect-ratio:16/10;background:linear-gradient(135deg,var(--blue),var(--blue-dark));position:relative;overflow:hidden}
+.ph{border-radius:12px;aspect-ratio:16/10;background:linear-gradient(135deg,var(--blue),var(--blue-dark));position:relative;overflow:hidden}
 .ph.pink{background:linear-gradient(135deg,var(--pink),var(--pink-dark))}
 .ph.light{background:linear-gradient(135deg,var(--blue-light),var(--pink-light))}
 .ph.tall{aspect-ratio:4/5}
 .ph::after{content:attr(data-label);position:absolute;left:16px;bottom:14px;font-family:var(--mono);font-size:12px;text-transform:uppercase;opacity:.7}
-.stack{display:grid;gap:24px}
+
 
 /* impact */
-.impact{padding-block:96px}
+.impact{padding-block:8rem 4rem}
 .impact h2{font-size:clamp(32px,4vw,56px);letter-spacing:-.03em;font-weight:500;margin-bottom:48px}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,80px);padding-block:32px;border-top:1px solid rgba(255,255,255,.2)}
-.row .big{font-size:clamp(48px,7vw,104px);letter-spacing:-.05em;line-height:1}
+.row{display:flex;justify-content:space-between;align-items:flex-start;gap:clamp(24px,5vw,80px);padding-block:32px;border-top:1px solid rgba(255,255,255,.2)}
+.row>div:first-child{width:100%;max-width:28rem}.row .big{font-size:clamp(48px,7vw,104px);letter-spacing:-.05em;line-height:1}
 .row:nth-child(odd) .big{color:var(--blue)}
 .row:nth-child(even) .big{color:var(--pink)}
-.row p{opacity:.7;align-self:end;max-width:44ch}
+.row p{opacity:.7;width:100%;max-width:75rem}
 
 /* quote */
 .quote{padding-block:48px 96px}
@@ -85,7 +87,7 @@ h1{font-size:clamp(40px,6vw,88px);line-height:1;letter-spacing:-.04em;font-weigh
 .quote cite{display:block;margin-top:24px;font-style:normal}
 
 /* marquee */
-.marquee{overflow:hidden;border-block:1px solid rgba(255,255,255,.2);padding-block:28px}
+.marquee{overflow:hidden;padding:16rem 0 9rem}
 .track{display:flex;gap:48px;width:max-content;animation:scroll 28s linear infinite;font-size:clamp(40px,7vw,96px);letter-spacing:-.04em;white-space:nowrap}
 .track span:nth-child(even){color:var(--blue)}
 @keyframes scroll{to{transform:translateX(-50%)}}
@@ -105,12 +107,13 @@ footer{background:var(--blue-dark);margin-top:96px;padding-block:72px 32px;posit
 .f-word{font-size:clamp(64px,18vw,260px);letter-spacing:-.06em;font-weight:600;line-height:.9;opacity:.08;margin-top:32px;white-space:nowrap}
 
 @media (max-width:991px){
+  .pad{padding-inline:1.5rem}.hero-grid{flex-direction:column;padding-top:6rem}.left{position:static;max-width:100%}.right{margin-top:0}.row{flex-direction:column}.marquee{padding-top:8rem}
   .menu{display:none;position:absolute;inset:72px 0 auto 0;flex-direction:column;background:#000;padding:24px var(--gutter)}
   .menu.show{display:flex}
   .burger{display:block}.chat{display:none}
-  .hero-grid,.f-grid,.row{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
 }
-@media (max-width:479px){.cols{grid-template-columns:1fr 1fr}.f-bottom{flex-direction:column;gap:8px}}
+@media (max-width:479px){.pad{padding-inline:1.25rem}.cols{grid-template-columns:1fr 1fr}.f-bottom{flex-direction:column;gap:8px}}
 </style>
 </head>
 <body>
@@ -128,27 +131,26 @@ footer{background:var(--blue-dark);margin-top:96px;padding-block:72px 32px;posit
 
 <main>
 <section class="hero pad"><div class="wrap hero-grid">
-  <div>
+  <div class="left">
     <a class="pill" href="#">Client Name <span>↗</span></a>
     <p class="mono xs tags"><span class="dim">[WEBSITE] - [BRANDING] - [MARKETING DESIGN] - </span><span class="purple">$0.0M RAISED</span></p>
     <h1>Brand &amp; website rebuilt in 45 days.</h1>
     <p class="lede">Placeholder summary: a short paragraph describing the engagement, the challenge, and the outcome for the client.</p>
-  </div>
-  <div class="tabs" id="tabs">
+    <div class="tabs" id="tabs">
     <div class="tab open"><button class="tab-top"><b>01 — Overview</b><em>+</em></button><div class="tab-bottom"><div><p>Placeholder text describing the project overview, goals and context.</p></div></div></div>
     <div class="tab"><button class="tab-top"><b>02 — Challenge</b><em>+</em></button><div class="tab-bottom"><div><p>Placeholder text describing the problem the client faced.</p></div></div></div>
     <div class="tab"><button class="tab-top"><b>03 — Approach</b><em>+</em></button><div class="tab-bottom"><div><p>Placeholder text describing the process and decisions made.</p></div></div></div>
     <div class="tab"><button class="tab-top"><b>04 — Identity</b><em>+</em></button><div class="tab-bottom"><div><p>Placeholder text about logo, type and color system.</p></div></div></div>
     <div class="tab"><button class="tab-top"><b>05 — Website</b><em>+</em></button><div class="tab-bottom"><div><p>Placeholder text about layout, motion and build.</p></div></div></div>
     <div class="tab"><button class="tab-top"><b>06 — Launch</b><em>+</em></button><div class="tab-bottom"><div><p>Placeholder text about the rollout and results.</p></div></div></div>
+    </div>
   </div>
-</div></section>
-
-<section class="pad"><div class="wrap stack">
-  <div class="ph" data-label="Hero visual"></div>
-  <div class="ph pink" data-label="Brand system"></div>
-  <div class="ph light" data-label="Website screens"></div>
-  <div class="ph tall" data-label="Marketing collateral"></div>
+  <div class="right">
+    <div class="ph" data-label="Hero visual"></div>
+    <div class="ph pink" data-label="Brand system"></div>
+    <div class="ph light" data-label="Website screens"></div>
+    <div class="ph tall" data-label="Marketing collateral"></div>
+  </div>
 </div></section>
 
 <section class="impact pad"><div class="wrap">
