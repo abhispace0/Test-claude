@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&amp;display=swap" />
+<style>html,body{margin:0;height:100%;background:#e9e4dc;}a{color:#151412;}a:hover{color:#5E5850;}</style>
+<script>window.OM_SCENES = '[{"name":"Float","dur":6.5,"desc":"Card rises in at centre; seven gold and silver currency coins ($ € £ ¥ A$) emerge from it into a flat halo and bob gently"},{"name":"Absorb","dur":1.3,"desc":"Coins are pulled back into the card one by one; card gives a soft warm glint"},{"name":"Handoff","dur":1.2,"desc":"Card arcs across; phone rises in late and meets it as it lands","nat":1.8},{"name":"Phone","dur":6.4,"desc":"Card idles inside the phone with gentle sway and sheen"}]';</script>
+<script>window.OM_PLAYBACK = '{"mode":"loop"}';</script>
+<script>window.TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "motionEditor": true,
+  "theme": "Cream",
+  "tilt": 1,
+  "sheen": 1,
+  "coins": true
+}/*EDITMODE-END*/;</script>
+</helmet>
+<div style="position:fixed;inset:0;">
+<x-import component-from-global-scope="IntroVideo" from="./animations-v3.jsx ./tweaks-panel.jsx ./intro-scene-v3.jsx" hint-size="100%,100%"></x-import>
+</div>
+</x-dc>
+</body>
+</html>
